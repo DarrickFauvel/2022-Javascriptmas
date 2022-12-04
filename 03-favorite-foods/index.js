@@ -15,13 +15,13 @@ and for supper I want usually want pizza 🍕.
 */
 
 const faveFoods = {
-  breakfast: 'For breakfast, I only like croissants 🥐.',
-  lunch: 'For lunch, I love pasta 🍝,',
-  supper: 'and for supper I usually want pizza 🍕.'
-}
+  breakfast: 'For breakfast, I love to eat bacon and eggs 🥓🍳.<br><br>',
+  lunch: 'Hamburgers 🍔🍔 are my favorite for lunch.<br><br>',
+  supper: 'And for supper, I usually have a big salad 🥗.'
+};
 
-const { breakfast, lunch, supper } = faveFoods
+const { breakfast, lunch, supper } = faveFoods;
 
 document.getElementById(
   'meals'
-).innerHTML = `<p>${breakfast} ${lunch} ${supper}</p>`
+).innerHTML = `<p>${breakfast} ${lunch} ${supper}</p>`;
