@@ -7,7 +7,15 @@ Example output: "I'M So hApPy iT'S MoNdAy"
 */
 
 function altCaps(str) {
-  return newStr;
+  return str
+    .split('')
+    .map((character, index) => {
+      return index % 2 === 0
+        ? character.toUpperCase()
+        : character.toLowerCase();
+    })
+    .join('');
 }
 
+console.log(altCaps("I'm so happy it's Monday"));
 console.log(altCaps('When you visit Portland you have to go to VooDoo Donuts'));
