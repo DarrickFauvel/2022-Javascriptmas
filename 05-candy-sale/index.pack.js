@@ -17,4 +17,19 @@ import products from './data.js';
     ]
 */
 
-function getSaleItems(data) {}
+function getSaleItems(data) {
+  return data
+    .filter(({ item: itemEmoji }) => {
+      return itemEmoji === '🍭' || itemEmoji === '🍫' || itemEmoji === '🍬';
+    })
+    .map(({ item: itemEmoji, price: priceValue }) => {
+      return {
+        item: itemEmoji,
+        price: priceValue
+      };
+    });
+}
+
+const shoppingCart = getSaleItems(products);
+
+console.log(shoppingCart);
