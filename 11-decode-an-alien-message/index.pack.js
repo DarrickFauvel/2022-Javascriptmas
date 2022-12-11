@@ -30,11 +30,11 @@ function reverseString(arr) {
 
 function reverseStringManually(arr) {
   // Reverse string using manual method
-  const newArray = [];
+  let newString = '';
   for (let i = arr.length - 1; i >= 0; i--) {
-    newArray.push(arr[i]);
+    newString += arr[i];
   }
-  return newArray.join('');
+  return newString;
 }
 
 /*
