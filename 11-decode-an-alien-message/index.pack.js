@@ -24,7 +24,17 @@ Example output: Welcome to earth!
 */
 
 function reverseString(arr) {
-  return arr;
+  // Reverse string using built-in methods
+  return arr.split('').reverse().join('');
+}
+
+function reverseStringManually(arr) {
+  // Reverse string using manual method
+  const newArray = [];
+  for (let i = arr.length - 1; i >= 0; i--) {
+    newArray.push(arr[i]);
+  }
+  return newArray.join('');
 }
 
 /*
@@ -36,8 +46,17 @@ reverse the strings manually.
 */
 
 function reverseStringsInArray(arr) {
-  return arr;
+  return arr.map((arrayString) => reverseString(arrayString));
 }
 
+function reverseStringsInArrayManually(arr) {
+  return arr.map((arrayString) => reverseStringManually(arrayString));
+}
+
+// Log results using built-in methods to reverse string
 console.log(reverseString(title));
 console.log(reverseStringsInArray(messages));
+
+// Log results using manual method to reverse string
+console.log(reverseStringManually(title));
+console.log(reverseStringsInArrayManually(messages));
