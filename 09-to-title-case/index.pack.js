@@ -16,7 +16,7 @@ Hint: Trying using slice() and .toUpperCase()
 */
 
 function capitalizeWord(word) {
-  return;
+  return word[0].toUpperCase() + word.slice(1);
 }
 
 /* 
@@ -24,7 +24,12 @@ Now write a function that capitalizes every word in a sentence.
 How can you reuse the function you just wrote? 
 */
 
-function toTitleCase(str) {}
+function toTitleCase(str) {
+  return str
+    .split(' ')
+    .map((word) => capitalizeWord(word))
+    .join(' ');
+}
 
 // Test your functions
 console.log(capitalizeWord('pumpkin'));
