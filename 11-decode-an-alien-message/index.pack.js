@@ -46,11 +46,11 @@ reverse the strings manually.
 */
 
 function reverseStringsInArray(arr) {
-  return arr.map((arrayString) => reverseString(arrayString));
+  return arr.map(reverseString);
 }
 
 function reverseStringsInArrayManually(arr) {
-  return arr.map((arrayString) => reverseStringManually(arrayString));
+  return arr.map(reverseStringManually);
 }
 
 // Log results using built-in methods to reverse string
